@@ -1,6 +1,13 @@
-FloodGuard: Ethical Flood Control and Monitoring System
+ FloodGuard: Ethical Flood Control and Monitoring System
+ 
+ Team GelLyRob – IT-211O
+ 
+ Gonda, Chris Angel H.
 
-Team GelLyRob – IT-211O
+ Mahiya, Lyta Mae M.
+ 
+ Rivera, Rob Gunther G.
+
 
 📌 Project Overview
 
@@ -11,65 +18,91 @@ Pahuriray & Cerna (2025) emphasize the importance of IoT sensors, real-time data
 
 The application allows users to manage regions, update water levels, and assess flood risks using object-oriented programming concepts.
 
+
 🧠 OOP Concepts Used
+
 Encapsulation
+
 Private fields in the Region class (name, waterLevel, safetyThreshold).
+
 Dedicated getters and setters control access.
+
 Input validation prevents negative or invalid data.
 
 Inheritance
+
 UrbanRegion and RuralRegion both extend the abstract Region class.
+
 Each region type uses different sensitivity levels for flood evaluation.
 
 Polymorphism
+
 evaluateFloodRisk() is overridden in each subclass.
+
 Urban areas use stricter thresholds; rural areas allow more water level variance.
 
 Abstraction
+
 Region defines shared properties and methods.
+
 Subclasses implement specific risk evaluation logic.
 
 Exception Handling
+
 try-catch blocks handle invalid numeric input.
+
 Protects against runtime errors and ensures stable program execution.
 
+
 📁 Program Structure
+
 Main Classes
+
 Region (abstract)
+
 Base class containing attributes for name, water level, and safety threshold.
 
 UrbanRegion (subclass)
+
 Uses stricter thresholds due to infrastructure sensitivity.
 
 RuralRegion (subclass)
+
 More flexible water-level tolerance.
 
-📊 Text-Based Class Diagram (Simplified)
-         +-------------------+
-          |     Region        |  (abstract)
-          +-------------------+
-          | - name            |
-          | - waterLevel      |
-          | - safetyThreshold |
-          +-------------------+
-          | + evaluateFloodRisk() (abstract)
-          | + getters/setters
-          +-------------------+
-                /       \
-               /         \
-+----------------+   +----------------+
-|  UrbanRegion   |   |  RuralRegion   |
-+----------------+   +----------------+
-| overrides risk |   | overrides risk |
-+----------------+   +----------------+
 
-            +----------------------+
-            |  FloodGuardConsole   |
-            +----------------------+
-            | menu, input, lists  |
-            | region management   |
-            +----------------------+
+📊 Text-Based Class Diagram (Simplified)
+
+                   +----------------------+
+                   |      Region (abs)    |
+                   +----------------------+
+                   | - name               |
+                   | - waterLevel         |
+                   | - safetyThreshold    |
+                   +----------------------+
+                   | + evaluateFloodRisk()|
+                   | + generateAlert()    |
+                   +-----------+----------+
+                               |
+                -------------------------------
+                |                             |
+     +---------------------+       +---------------------+
+     |    UrbanRegion      |       |    RuralRegion      |
+     +---------------------+       +---------------------+
+     | threshold = 10.0    |       | threshold = 12.0    |
+     | overrides evaluate  |       | overrides evaluate  |
+     +---------------------+       +---------------------+
+
+                     +----------------------------+
+                     |     FloodGuardConsole     |
+                     +----------------------------+
+                     | main program logic         |
+                     | manages regions (List)     |
+                     +----------------------------+
+
+
 How to Run the Program
+
 1. Save the Java File
 
 Make sure the filename matches the public main class.
@@ -98,39 +131,64 @@ View risk assessments
 
 List all regions
 
+
 🖥️ Sample Output
+
+<img width="753" height="387" alt="Screenshot 2025-11-30 113648" src="https://github.com/user-attachments/assets/1e260853-9e10-40ad-a466-3223a89cf5df" />
+
+
+
+
+
 
 
 
 ✍️ Authors & Acknowledgements
 
 This project was created by Team GelLyRob:
-Chris Angel H. Gonda – Writer, researcher, documentation
+
+Chris Angel H. Gonda – Leader, writer, researcher, documentation
+
 Lyta Mae M. Mahiya – Writer, researcher, documentation
+
 Rob Gunther Rivera – Console programming, system development
 
 The division of tasks allowed each member to contribute based on their strengths, ensuring efficient workflow and creativity in both writing and system implementation.
 
 Special thanks to:
+
 Ms. Christiana Grace Alib — for providing continuous guidance, feedback, and encouragement.
+
 Families, loved ones, and friends — for their unwavering support.
+
 Each team member — for their dedication, effort, and collaboration that led to the project's success.
 
+
 🚀 Future Enhancements
+
 The team recommends the following improvements:
+
 1. Modernized Interface
+
 Add colorized terminal UI or migrate to GUI frameworks (JavaFX, Swing).
 
 2. Expanded System Capabilities
+   
 Asynchronous background processing.
+
 Region filtering and sorting options.
+
 More advanced modeling of flood progression.
 
 3. Database Integration
+   
 Store region data permanently using MySQL or SQLite.
+
 Enable long-term flood history tracking.
 
+
 📚 References
+
 Pahuriray, A. V., & Cerna, P. D. (2025). IoT-enabled flood monitoring and early warning systems. International Journal of Computer Science and Mobile Computing.
 (https://www.ijcsmc.com/docs/papers/April2025/V14I4202515.pdf
 )
