@@ -151,7 +151,7 @@ Chris Angel H. Gonda – Leader, writer, researcher, documentation
 
 Lyta Mae M. Mahiya – Writer, researcher, documentation
 
-Rob Gunther G. Rivera – Console programming, researcher, system development
+Rob Gunther G. Rivera – Console programming, system development
 
 The division of tasks allowed each member to contribute based on their strengths, ensuring efficient workflow and creativity in both writing and system implementation.
 
